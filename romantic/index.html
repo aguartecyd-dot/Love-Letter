@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Letter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="scene">
+
+  <div class="title-wrap">
+    <h1>A Letter From The Heart</h1>
+    <p>With love · always · forever</p>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="gallery" id="gallery"></div>
+
+  <!-- ENVELOPE -->
+  <div class="envelope-wrap">
+    <div class="envelope-top">
+      <div>
+        <div class="envelope-label">To My Dearest</div>
+        <div id="recipient-display">My Love</div>
+      </div>
+      <div class="wax-seal">🌹</div>
+    </div>
+
+    <div class="letter-paper">
+      <div class="letter-date" id="letter-date"></div>
+      <div class="letter-salutation" id="salutation-display">My Dearest, My Love,</div>
+
+      <div class="letter-body">
+        <p id="para1">Write your message here...</p>
+      </div>
+
+      <div class="letter-closing">
+        <p>With all my heart,</p>
+        <div class="letter-sig" id="sender-display">Yours, Always</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="edit-hint">
+    <button class="edit-btn" onclick="openModal()">Personalize</button>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <h3>Personalize</h3>
+
+    <input type="text" id="inp-recipient" placeholder="Recipient">
+    <input type="text" id="inp-sender" placeholder="Sender">
+    <textarea id="inp-message" placeholder="Message"></textarea>
+
+    <button onclick="saveChanges()">Save</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<!-- ✅ FIXED JS LINK -->
+<script src="javascript.js"></script>
+
+</body>
+</html>
